@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <BorderPane prefHeight="307.0" prefWidth="237.0">
+         <center>
+            <Canvas fx:id="canvas" height="257.0" width="250.0" BorderPane.alignment="CENTER" />
+         </center>
+         <bottom>
+            <HBox prefHeight="29.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="button_AND" mnemonicParsing="false" onAction="#R_AND" text="AND" />
+                  <Button fx:id="button_OR" mnemonicParsing="false" onAction="#R_OR" text="OR" />
+                  <Button fx:id="button_NOT" mnemonicParsing="false" onAction="#R_NOT" text="NOT" />
+                  <Button fx:id="button_OR_NOT" mnemonicParsing="false" onAction="#R_OR_NOT" text="OR_NOT" />
+                  <Button fx:id="button_AND_NOT" mnemonicParsing="false" onAction="#R_AND_NOT" text="AND_NOT" />
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</GridPane>
