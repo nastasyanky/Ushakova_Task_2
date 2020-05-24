@@ -3,11 +3,11 @@ package Abi;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
-public class AND_NOT_R extends Shape {
+public class UPRAV_R extends Shape{
     double length;
     double width;
 
-    public AND_NOT_R(Color color, double length, double width) {
+    public UPRAV_R(Color color, double length, double width) {
         super(color);
         this.length = length;
         this.width = width;
@@ -16,6 +16,7 @@ public class AND_NOT_R extends Shape {
     @Override
     double area() {
         return length*width;
+
     }
 
     @Override
@@ -28,10 +29,11 @@ public class AND_NOT_R extends Shape {
     public void draw(GraphicsContext gr) {
         gr.setFill(Color.WHITE);
         gr.fillRect(10,10,500,500);
-        gr.strokeLine(70,100,120,100);
-        gr.strokeLine(70,150,120,150);
-        gr.strokeRect(120,50,75,150);
-        gr.strokeLine(195,125,245,125);
-        gr.strokeOval(190,120,10,10);
+        gr.setLineDashes(1);
+        gr.strokeLine(70,100,170,100);
+        gr.strokeLine(170,100,168,103);
+        gr.strokeLine(170,100,168,97);
+
+
     }
 }

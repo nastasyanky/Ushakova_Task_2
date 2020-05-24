@@ -3,20 +3,21 @@ package Abi;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
-public class OR_R extends Shape{
+public class SHL_R extends Shape{
     double length;
     double width;
 
-    public OR_R(Color color, double length, double width) {
+    public SHL_R(Color color, double length, double width) {
         super(color);
         this.length = length;
         this.width = width;
     }
 
+
+
     @Override
     double area() {
         return length*width;
-
     }
 
     @Override
@@ -29,11 +30,11 @@ public class OR_R extends Shape{
     public void draw(GraphicsContext gr) {
         gr.setFill(Color.WHITE);
         gr.fillRect(10,10,500,500);
-        gr.strokeLine(70,100,120,100);
-        gr.strokeLine(70,150,120,150);
-        gr.strokeRect(120,50,75,150);
-        gr.strokeLine(195,125,245,125);
-
+        gr.setLineDashes(1);
+        gr.strokeLine(125,125,150,150);
+        gr.strokeLine(150,150,175,125);
+        gr.strokeLine(125,125,150,100);
+        gr.strokeLine(150,100,175,125);
 
     }
 }

@@ -3,17 +3,15 @@ package Abi;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
-public class NOT_R extends Shape{
+public class ZADA_R extends Shape {
     double length;
     double width;
 
-    public NOT_R(Color color, double length, double width) {
+    public ZADA_R(Color color, double length, double width) {
         super(color);
         this.length = length;
         this.width = width;
     }
-
-
 
     @Override
     double area() {
@@ -29,11 +27,8 @@ public class NOT_R extends Shape{
     @Override
     public void draw(GraphicsContext gr) {
         gr.setFill(Color.WHITE);
+        gr.setLineDashes(1);
         gr.fillRect(10,10,500,500);
-        gr.strokeLine(70,125,120,125);
-        gr.strokeRect(120,50,75,150);
-        gr.strokeLine(195,125,245,125);
-        gr.strokeOval(190,120,10,10);
-
+        gr.strokeRoundRect(75,100,120,50,10,10);
     }
 }

@@ -3,6 +3,7 @@
 <?import javafx.scene.canvas.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <columnConstraints>
@@ -14,18 +15,31 @@
    <children>
       <BorderPane prefHeight="307.0" prefWidth="237.0">
          <center>
-            <Canvas fx:id="canvas" height="257.0" width="250.0" BorderPane.alignment="CENTER" />
+            <Canvas fx:id="canvas" height="231.0" width="322.0" BorderPane.alignment="CENTER" />
          </center>
          <bottom>
-            <HBox prefHeight="29.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+            <VBox prefHeight="44.0" prefWidth="322.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="button_AND" mnemonicParsing="false" onAction="#R_AND" text="AND" />
-                  <Button fx:id="button_OR" mnemonicParsing="false" onAction="#R_OR" text="OR" />
-                  <Button fx:id="button_NOT" mnemonicParsing="false" onAction="#R_NOT" text="NOT" />
-                  <Button fx:id="button_OR_NOT" mnemonicParsing="false" onAction="#R_OR_NOT" text="OR_NOT" />
-                  <Button fx:id="button_AND_NOT" mnemonicParsing="false" onAction="#R_AND_NOT" text="AND_NOT" />
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="label_1" contentDisplay="CENTER" ellipsisString="0" layoutX="67.0" layoutY="-1.0" prefHeight="21.0" prefWidth="188.0" text="Нажмите на одну из кнопок" textAlignment="CENTER" textOverrun="CLIP">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <HBox prefHeight="35.0" prefWidth="515.0">
+                     <children>
+                        <Button fx:id="button_SOB" mnemonicParsing="false" onAction="#R_SOB" text="СОБЫТИЕ" />
+                        <Button fx:id="button_ZADA" mnemonicParsing="false" onAction="#R_ZADA" text="ЗАДАЧА" />
+                        <Button fx:id="button_SHL" mnemonicParsing="false" onAction="#R_SHL" prefHeight="21.0" prefWidth="56.0" text="ШЛЮЗ" />
+                        <Button fx:id="button_UPRAV" mnemonicParsing="false" onAction="#R_UPRAV" text="УПРАВЛЕНИЕ" />
+                        <Button fx:id="button_SMS" mnemonicParsing="false" onAction="#R_SMS" text="СМС" />
+                     </children>
+                  </HBox>
                </children>
-            </HBox>
+            </VBox>
          </bottom>
       </BorderPane>
    </children>
